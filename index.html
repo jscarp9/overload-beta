@@ -651,6 +651,46 @@ html:not([data-mode=dark]) body[data-bg=stars]{background-color:#101224}
 .dtiles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:12px}.dtiles>div{background:var(--soft);border-radius:12px;padding:8px 4px;text-align:center;display:flex;flex-direction:column}.dtiles b{font:900 20px Archivo,sans-serif}.dtiles span{font-size:10.5px;color:var(--mute);font-weight:700}
 .dbars{display:flex;align-items:flex-end;gap:3px;height:80px;margin-bottom:12px}.dbars i{flex:1;background:var(--accent);border-radius:3px 3px 0 0;min-height:2px}
 .drow{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--line)}.drow .sub{font-size:12px}
+/* 0.16 */
+.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+.tabs button{font-size:11px}
+.sheetbg.na,.sheet.na{animation:none!important}
+.ph16{padding:0 0 16px!important;overflow:hidden;text-align:center}
+.ph16ban{height:118px;position:relative;overflow:hidden}
+.ph16ban .scene{position:absolute;inset:0;width:100%;height:100%}
+.ph16plain{background:linear-gradient(135deg,var(--accent),rgba(0,0,0,.6))}
+.ph16row{display:flex;justify-content:center;align-items:flex-end;gap:10px;margin-top:-40px;position:relative}
+.ph16av .av{box-shadow:0 0 0 4px var(--card),0 10px 24px -10px rgba(0,0,0,.6)}
+.ph16emb{width:40px;height:40px;margin-left:-26px;margin-bottom:-4px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.5))}
+.ph16emb svg,.ph16emb img{width:100%;height:100%}
+.ph16n{margin:10px 0 4px;font-size:26px}
+.ph16tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;padding:0 14px}
+.ph16m{margin:10px 18px 0;font-style:italic;color:var(--sub)}
+.ph16pins{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:12px 14px 0}
+.pin16{border:1px solid rgba(127,127,127,.22);background:rgba(127,127,127,.08);color:var(--ink);border-radius:999px;padding:6px 11px;font:700 12.5px Inter,sans-serif;display:flex;gap:5px;align-items:center;cursor:pointer}
+.pin16.add{color:var(--sub);border-style:dashed}
+.ph16btns{display:flex;gap:8px;justify-content:center;margin-top:14px;padding:0 14px}
+.ph16btns .btn{flex:1;max-width:180px}
+.life16{margin-bottom:12px;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px}
+.life16 .tile .sub{font-size:11px}
+.life16 .tile{padding:10px 6px}
+.life16 .num{font-size:17px}
+.nx16 .pbar{margin-top:6px}
+.sw16{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:middle}
+.pe16 .r15 .sub{max-width:46%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pe16sec{margin-top:8px}
+.lk16 .lkc{min-height:40px}
+.lk16i{font-size:11px;opacity:.7}
+.lkc.lk{opacity:.55}
+.scnone{height:64px;display:flex;align-items:center;justify-content:center;color:var(--sub);font-weight:700;border-radius:12px;background:rgba(127,127,127,.12)}
+.ghd #pe16back,.ghd #lk16back{flex:0 0 auto}
+.tour16{text-align:center;padding:10px 4px 4px}
+.t16i{font-size:64px;line-height:1;margin:6px 0 10px;animation:pop .4s}
+.tour16 h2{margin:0 0 6px}
+.t16d{display:flex;gap:6px;justify-content:center;margin-top:12px}
+.t16d i{width:7px;height:7px;border-radius:50%;background:rgba(127,127,127,.35);transition:all .2s}
+.t16d i.on{width:20px;border-radius:4px;background:var(--accent)}
+.fplate{filter:drop-shadow(0 0 6px rgba(232,197,92,.25))}
 
 /* ===== Redesign: Overload Pro look ===== */
 :root{--bg:#f4f4f6;--ink:#0d0d10;--mute:#6c6c74;--line:rgba(0,0,0,.08);--card:#ffffff;--soft:#efeff2;--accent:#e5352b;--red:#e5352b;--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px -16px rgba(0,0,0,.18);--rad:18px;--font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",system-ui,sans-serif;--dfont:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif}
@@ -776,6 +816,7 @@ html body .raid{background:linear-gradient(135deg,#1a0f2a,#2a1640);color:#fff;bo
   <nav class="tabs">
     <button id="t-log" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg>Today</button>
     <button id="t-crew" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16 14.2c2.6-.2 4.5 1.4 5 4.3"/></svg>Crew</button>
+    <button id="t-me" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></svg>Profile</button>
     <button id="t-stats" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 20V11M12 20V5M19 20v-6"/></svg>Stats</button>
     
     <button id="t-plan" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>Plan</button>
@@ -870,7 +911,7 @@ function plateSVG(color,state,opts={}){const id='p'+(pid++),c=PC[color]||PC.red,
  o+=`<circle cx="50" cy="50" r="44.5" fill="none" stroke="rgba(0,0,0,.22)" stroke-width="1.2"/>`;
  if(black&&!opts.big)o+=`<circle cx="50" cy="50" r="41.5" fill="none" stroke="${c[0]}" stroke-width="2.4"/>`;
  o+=`<circle cx="50" cy="50" r="36" fill="none" stroke="rgba(0,0,0,.16)" stroke-width=".9"/><circle cx="50" cy="50" r="33" fill="none" stroke="rgba(255,255,255,.10)" stroke-width=".9"/>`;
- if(opts.big){o+=`<path id="${id}t" d="M50 50 m-39 0 a39 39 0 1 1 78 0 a39 39 0 1 1 -78 0" fill="none"/><text style="font:800 6.4px Archivo,sans-serif;letter-spacing:1.6px" fill="${black?'rgba(255,255,255,.55)':'rgba(255,255,255,.85)'}"><textPath href="#${id}t" startOffset="2%">OVERLOAD · ${esc(opts.label||'')}</textPath></text><text style="font:800 6.4px Archivo,sans-serif;letter-spacing:1.6px" fill="${black?'rgba(255,255,255,.55)':'rgba(255,255,255,.85)'}"><textPath href="#${id}t" startOffset="52%">${rimLabel(opts.label)}</textPath></text>`}
+ if(opts.big&&color!=='og'){o+=`<path id="${id}t" d="M50 50 m-39 0 a39 39 0 1 1 78 0 a39 39 0 1 1 -78 0" fill="none"/><text style="font:800 6.4px Archivo,sans-serif;letter-spacing:1.6px" fill="${black?'rgba(255,255,255,.55)':'rgba(255,255,255,.85)'}"><textPath href="#${id}t" startOffset="2%">OVERLOAD · ${esc(opts.label||'')}</textPath></text><text style="font:800 6.4px Archivo,sans-serif;letter-spacing:1.6px" fill="${black?'rgba(255,255,255,.55)':'rgba(255,255,255,.85)'}"><textPath href="#${id}t" startOffset="52%">${rimLabel(opts.label)}</textPath></text>`}
  o+=`<circle cx="50" cy="50" r="24" fill="rgba(0,0,0,.28)"/><circle cx="50" cy="50" r="22.5" fill="url(#${id}h)"/><circle cx="50" cy="50" r="22.5" fill="none" stroke="rgba(0,0,0,.35)" stroke-width=".8"/>`;
  o+=`<circle cx="50" cy="50" r="16" fill="none" stroke="rgba(0,0,0,.22)" stroke-width=".8"/>`;
  for(let i=0;i<6;i++){const a=i*Math.PI/3+Math.PI/6;o+=`<circle cx="${(50+19.3*Math.cos(a)).toFixed(2)}" cy="${(50+19.3*Math.sin(a)).toFixed(2)}" r="1.3" fill="#6f7580"/><circle cx="${(50+19.3*Math.cos(a)-.35).toFixed(2)}" cy="${(50+19.3*Math.sin(a)-.35).toFixed(2)}" r=".6" fill="#fff" opacity=".9"/>`}
@@ -882,8 +923,8 @@ function plateSVG(color,state,opts={}){const id='p'+(pid++),c=PC[color]||PC.red,
 /* ---------- today ---------- */
 function counts(){const s=cur();let tot=0,dn=0;todayGroups().forEach(gr=>gr.forEach(e=>{tot+=Math.max(+e.sets||2,(s.ex[e.id]||[]).length);dn+=(s.ex[e.id]||[]).filter(x=>x&&x.d).length}));return[dn,tot]}
 
-const VERSION=BETA?'0.15 design beta':'0.15';
-const NEWS=[['Themed plates','Plates now have real designs: rank plates from Bronze Forged to Olympian Marble, Legend plates for each lift, crew trophy plates, funny badge plates and holiday plates you earn by lifting on the holiday. Thanksgiving is the first one up.'],['Cleaner Plan','Plate color is now one row. Tap it to pick from tabs, and locked plates stay hidden until you want to see them.'],['Crew profiles','Tap anyone in your crew for their full profile: banner, avatar, motto, gym, flex stats, best lift, pinned trophies, plate collection and PR timeline. Edit yours from Profile → Your crew profile.'],['Respect and nicknames','Give a crewmate respect once a day. Vote on nicknames for each other.'],['Boss raids','Every week a boss shows up in your crew feed. Every pound the crew lifts does damage. Beat it for crew XP, mystery boxes and the Boss Slayer plate.'],['Lift together','At the gym with crewmates? Start a group from Today. Everyone sees each other’s sets and rest timers, and you finish with one shared workout card.'],['Crew extras','Roles, jersey numbers, crew motto and colors, a crest reaction, pinned chat messages and a Hall of Fame.'],['OG','Everyone here before the App Store launch gets a numbered OG badge and OG plate.'],['Your name on the plate','Engrave your name or motto around the big plate on Today.'],['Tidier screens','Profile, Arena and Settings are split into smaller sections you can open when you need them.']];
+const VERSION=BETA?'0.16 design beta':'0.16';
+const NEWS=[['Profile tab','Your profile has its own tab now, right between Crew and Stats. Everything is one clean list.'],['Cleaner everything','Edit profile and Customize are short lists now. Tap a row to change just that one thing.'],['Profile banners','Pick an animated banner for your profile in Edit profile. New ones: Sunrise, Neon Gym, Summit and Chalk Cloud.'],['Badges in one place','All your badges live behind one Badges row with tabs.'],['Smoother sheets','Switching plate categories and tabs inside a sheet no longer closes and reopens it.'],['App tour','New to Overload? Take the quick tour in Settings.']];
 if(BETA)NEWS.unshift(['New design (beta)','The cleaner, calmer Overload look: native iPhone fonts, line icons instead of emojis, quieter cards and a simpler tab bar. Add your own photo to any exercise from its ⋯ menu. This beta keeps its own data, separate from your main app.']);
 const isDark=()=>document.documentElement.dataset.mode==='dark';
 function applyTheme(){const t=st.set.theme||'auto',mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');const m=t==='auto'?(mq&&mq.matches?'dark':'light'):t;document.documentElement.dataset.mode=m;const mt=document.querySelector('meta[name=theme-color]');if(mt)mt.setAttribute('content',m==='dark'?'#07080c':'#f7f5f1')}
@@ -1037,17 +1078,17 @@ function uiKey(){return JSON.stringify([st.sub,st.prog,st.pday,st.date,st.day,st
 function paneEl(k){const m=$('main');let el=PANES[k]&&PANES[k].el;if(!el||el.parentNode!==m){el=document.createElement('div');el.className='pane';el.dataset.k=k;m.appendChild(el);PANES[k]={el,drev:-1}}return el}
 function paneHide(el){el.classList.add('off');el.classList.remove('fin');if(!CVOK)el.style.display='none';el.querySelectorAll('[id]').forEach(x=>{x.dataset.cid=x.id;x.removeAttribute('id')})}
 function paneShow(el){el.classList.remove('off');if(!CVOK)el.style.display='';el.querySelectorAll('[data-cid]').forEach(x=>{if(!x.id)x.id=x.dataset.cid;delete x.dataset.cid})}
-function paneHTML(h){const k=paneKey(),el=paneEl(k);Object.entries(PANES).forEach(([k2,p])=>{if(k2!==k&&!p.el.classList.contains('off'))paneHide(p.el)});paneShow(el);el.innerHTML=h;if(k==='settings'||k==='profile')try{collapse15(el)}catch(e){}Object.assign(PANES[k],{drev:DREV,ui:uiKey(),ts:Date.now(),cs:st.cs,live:st.liveMap})}
+function paneHTML(h){const k=paneKey(),el=paneEl(k);Object.entries(PANES).forEach(([k2,p])=>{if(k2!==k&&!p.el.classList.contains('off'))paneHide(p.el)});paneShow(el);el.innerHTML=h;if(k==='settings')try{collapse15(el)}catch(e){}Object.assign(PANES[k],{drev:DREV,ui:uiKey(),ts:Date.now(),cs:st.cs,live:st.liveMap})}
 function paneCached(){const k=paneKey(),p=PANES[k];if(!p||!st.plan||p.drev!==DREV||p.ui!==uiKey()||p.cs!==st.cs||p.live!==st.liveMap||Date.now()-p.ts>180000||k==='settings'||k==='onboard')return false;
  renderChrome();Object.entries(PANES).forEach(([k2,q])=>{if(k2!==k&&!q.el.classList.contains('off'))paneHide(q.el)});paneShow(p.el);return true}
 function paneFade(){const k=paneKey(),p=PANES[k];if(!p)return;p.el.classList.remove('fin');requestAnimationFrame(()=>p.el.classList.add('fin'))}
-function renderChrome(){const E=engine();$('rankbtn').innerHTML=emblem(E.rank,E.rank>=6?'spin':'');$('rankbtn').setAttribute('aria-pressed',st.profile);['log','crew','stats','plan'].forEach(t=>$('t-'+t).setAttribute('aria-pressed',!st.settings&&!st.profile&&st.tab===t));{const k=curArt();if(artKey!==k+innerWidth+'x'+innerHeight+(isDark()?'d':'l'))art(k)}}
+function renderChrome(){const E=engine();$('rankbtn').innerHTML=emblem(E.rank,E.rank>=6?'spin':'');$('rankbtn').setAttribute('aria-pressed',st.profile);['log','crew','stats','plan'].forEach(t=>$('t-'+t).setAttribute('aria-pressed',!st.settings&&!st.profile&&st.tab===t));navSync16();{const k=curArt();if(artKey!==k+innerWidth+'x'+innerHeight+(isDark()?'d':'l'))art(k)}}
 function render(){pid=0;{const k=curArt();if(artKey!==k+innerWidth+'x'+innerHeight+(isDark()?'d':'l'))art(k)}const hr=new Date().getHours();$('hi').textContent=st.set.name?`${hr<12?'Good morning':hr<18?'Good afternoon':'Good evening'}, ${st.set.name}`:'';
  $('wm').innerHTML=plateSVG('red','done')+'Overload'+(st.set.acct?`<span id="syncdot" class="sdot s-${st.syncState.state==='off'?'ok':st.syncState.state}"></span>`:'');
  if(!st.plan){paneHTML(renderOnboard()+`<button class="card obsign" id="acin"><span>☁️</span><span class="stx"><b>Already have an account?</b><span class="sub">Sign in to bring back all your workouts</span></span><span class="sc">›</span></button>`);$('dock').classList.add('hide');$('gear').classList.add('hide');$('rankbtn').classList.add('hide');return}
  $('dock').classList.remove('hide');$('gear').classList.remove('hide');{const E=engine();$('rankbtn').classList.remove('hide');$('rankbtn').innerHTML=emblem(E.rank,E.rank>=6?'spin':'');$('rankbtn').setAttribute('aria-pressed',st.profile)}
- ['log','crew','stats','plan'].forEach(t=>$('t-'+t).setAttribute('aria-pressed',!st.settings&&!st.profile&&st.tab===t));
- paneHTML(st.profile?renderProfile():st.settings?renderSettings():st.tab==='log'?renderLog():st.tab==='crew'?renderCrew14():st.tab==='stats'?seg('stats',[['ov','Overview'],['lifts','Lifts']],st.sub.stats)+(st.sub.stats==='lifts'?renderProg():goalsHTML()+chainsHTML()+renderStats()):seg('plan',[['plan','Plan'],['notes','Notes']],st.sub.plan)+(st.sub.plan==='notes'?renderNotes():renderPlan()));
+ ['log','crew','stats','plan'].forEach(t=>$('t-'+t).setAttribute('aria-pressed',!st.settings&&!st.profile&&st.tab===t));navSync16();
+ paneHTML(st.profile?renderProfile16():st.settings?renderSettings():st.tab==='log'?renderLog():st.tab==='crew'?renderCrew14():st.tab==='stats'?seg('stats',[['ov','Overview'],['lifts','Lifts']],st.sub.stats)+(st.sub.stats==='lifts'?renderProg():goalsHTML()+chainsHTML()+renderStats()):seg('plan',[['plan','Plan'],['notes','Notes']],st.sub.plan)+(st.sub.plan==='notes'?renderNotes():renderPlan()));
  if(roc){roc.disconnect();roc=null}const c=$('chart');if(c){roc=new ResizeObserver(drawChart);roc.observe(c)}
  if(st.picker){const ps=$('psearch');if(ps)ps.focus({preventScroll:true})}fillExImgs()}
 function ensure(){const k=sid();if(!st.sessions[k])st.sessions[k]={date:st.date,day:st.day,ex:{},names:{}};const s=st.sessions[k];s.ex=s.ex||{};s.names=s.names||{};return s}
@@ -1094,7 +1135,7 @@ function saveRename(){const r=$('rename');if(!r)return;const v=r.value.trim();if
 main.addEventListener('focusout',e=>{if(e.target.id==='rename')setTimeout(saveRename,0)});
 main.addEventListener('keydown',e=>{if(e.target.id==='rename'&&e.key==='Enter'){e.preventDefault();e.target.blur();return}if(e.target.id==='psearch'&&e.key==='Enter'){e.preventDefault();const q=e.target.value.trim();if(!q)return;const hit=LIB.find(x=>x[0].toLowerCase()===q.toLowerCase());if(hit)addFromPicker(...hit);else addFromPicker(q,'Other',8,12)}});
 main.addEventListener('click',async e=>{const b=e.target.closest('button');if(!b)return;const d=st.plan&&st.plan.days[st.pday];
- if(await click15(b))return;if(await click14(b))return;if(await crewClick(b))return;
+ if(await click16(b))return;if(await click15(b))return;if(await click14(b))return;if(await crewClick(b))return;
  if(await acctClick(b))return;if(await click13(b))return;
  if(b.id==='openprof'){st.profile=true;render();window.scrollTo({top:0});return}
  if(b.id==='pclose2'){st.profile=false;render();return}
@@ -1202,8 +1243,8 @@ function renderSheet(){const el=$('sheet'),sh=st.sheet;if(!sh){el.innerHTML='';r
  el.innerHTML=`<div class="sheetbg" id="sheetbg"><div class="sheet" role="dialog" aria-modal="true"><div class="grab"></div>${h}</div></div>`}
 $('sheet').addEventListener('input',e=>{if(e.target.id==='bwin'){const v=parseFloat(e.target.value);st.set.bw=v>0&&v<1000?v:'';saveSet()}});
 $('sheet').addEventListener('click',async e=>{if(e.target.id==='sheetbg'){if(st.sheet&&st.sheet.type==='news')markNews();st.sheet=null;renderSheet();return}const b=e.target.closest('button');if(!b)return;
- if(b.id==='sheetx'){st.sheet=null;st.confirm=null;renderSheet();return}
- if(await sheetClick15(b))return;if(await sheetClick14(b))return;if(await crewSheetClick(b))return;if(await acctSheetClick(b))return;if(await sheetClick13(b))return;
+ if(b.id==='sheetx'){if(st.sheet&&st.sheet.back){st.sheet=st.sheet.back;renderSheet();return}st.sheet=null;st.confirm=null;renderSheet();return}
+ if(await sheetClick16(b))return;if(await sheetClick15(b))return;if(await sheetClick14(b))return;if(await crewSheetClick(b))return;if(await acctSheetClick(b))return;if(await sheetClick13(b))return;
  if(b.id==='newsok'){markNews();st.sheet=null;renderSheet();setTimeout(()=>{if(!weekReport())checkUnlocks()},300);return}
  if(b.id==='shareprof2'){st.sheet={type:'share',title:'Share your rank'};renderSheet();const r=await profileCard();if(st.sheet&&st.sheet.type==='share'){st.sheet.url=r.url;st.sheet.file=r.file;renderSheet()}return}
  if(b.id==='missno'){missGuard=false;st.sheet=null;renderSheet();mirrorNow();return}
@@ -2387,7 +2428,7 @@ async function sheetClick14(b){const sh=st.sheet,d=b.dataset;if(!sh)return false
 /* extra pieces in the crew settings sheet */
 function crewInfoExtra(){const c=st.cs.crew,own=isOwner();if(!own)return '';
  return `<h3>Crew name</h3><div class="row2"><input id="crrenin" class="field" maxlength="30" value="${esc(c.name)}"><button class="btn" id="crrename">Rename</button></div>
- <h3>Crew banner</h3><div class="scgrid">${Object.entries(SCENES).map(([k,v])=>{const ok=sceneOK(k),on=(LEGACY_SCENE[c.banner]||c.banner)===k;return `<button class="scb${ok?'':' lk'}${on?' on':''}" data-scene="${k}" aria-pressed="${on}">${sceneSVG(k,c.level,'pick'+k)}<span>${esc(v[0])}${ok?'':' · 🔒 '+esc(v[1])}</span></button>`}).join('')}</div>
+ <h3>Crew banner</h3><div class="scgrid">${Object.entries(SCENES).filter(([k])=>k!=='founder'||sceneOK(k)).map(([k,v])=>{const ok=sceneOK(k),on=(LEGACY_SCENE[c.banner]||c.banner)===k;return `<button class="scb${ok?'':' lk'}${on?' on':''}" data-scene="${k}" aria-pressed="${on}">${sceneSVG(k,c.level,'pick'+k)}<span>${esc(v[0])}${ok?'':' · 🔒 '+esc(v[1])}</span></button>`}).join('')}</div>
  <h3>Crew motto and colors</h3><input id="crmotto" class="field" maxlength="60" placeholder="No days off" value="${esc((st.cs.style||{}).motto||'')}"><div class="lkrow" style="margin-top:8px">${['#ef2b36','#2563ff','#16b65b','#7c4dff','#c99a2e','#06b6d4','#ff3d8b','#e8e8ec'].map(x=>`<button class="lkc${(st.cs.style||{}).c1===x?' on':''}" data-crc="${x}"><i style="background:${x}"></i></button>`).join('')}</div><button class="btn" id="crstylesave">Save motto and colors</button>
  <h3>Safety</h3><button class="btn" id="crsnapsbtn">Crew backups (30 days)</button>`}
 /* shame plate voting: inside a member's sheet */
@@ -2533,7 +2574,7 @@ function profPage(id){const m=memberData(id);if(!m)return null;const p=m.profile
  const trs=trophies(),tp=(p.tpins||[]).map(k=>trs.find(t=>t.k===k)).filter(Boolean).map(t=>({...t,earned:true}));
  const posts=st.cs?(st.cs.posts||[]).filter(x=>x.by===m.id&&x.type==='workout').slice(0,2):[];
  const given=(st.cs&&st.cs.respectGiven||[]).includes(m.id),myNick=st.cs&&st.cs.nickVotes&&st.cs.nickVotes[m.id];
- const pb=p.pbanner&&p.pbanner!=='none'?p.pbanner:(p.founder?'blueprint':'forge');
+ const pb=p.pbanner&&p.pbanner!=='none'?p.pbanner:(p.founder?'founder':'forge');
  return `<div class="pp"${acc?` style="--pacc:${esc(acc)}"`:''}><div class="ppban">${pb==='blueprint'?blueprintSVG():sceneSVG(pb,8,'pp'+m.id)}<button class="btn sm ppx" id="sheetx">Done</button></div>
  <div class="pphead"><span class="ppav">${avatar(m,84)}</span><div class="ppid"><h2 class="${nfxClass(m)}${p.founder?' nf-founder':''}">${p.founder?'<span class="crown">👑</span> ':''}${esc(m.name)}</h2>${m.nick?`<div class="ppnick">“${esc(m.nick)}”</div>`:''}
  <div class="pptags">${p.founder?'<span class="tg tg-f">Founder #001</span>':''}${p.og&&!p.founder?`<span class="tg tg-og">OG #${String(p.og).padStart(3,'0')}</span>`:''}${m.role?`<span class="tg">${esc(m.role)}</span>`:''}${m.jersey!=null?`<span class="tg">#${m.jersey}</span>`:''}${rankChip(p)}</div></div></div>
@@ -2693,7 +2734,7 @@ async function sheetClick15(b){const sh=st.sheet,d=b.dataset;if(!sh)return false
  if(b.id==='fsave'){try{await vaultCall('/founder',acctBody({code:(($('fcode')||{}).value||'').trim()}));st.set.founder=true;saveSet();st.sheet=null;renderSheet();confetti(140);toast('👑 Welcome, Founder');syncCrew(true);render()}catch(e){toast(e.message==='wrong code'?'That code isn’t right':'Sign in first, then try again')}return true}
  return false}
 async function openDash(){st.sheet={type:'dash'};renderSheet();try{const r=await fetch(PUSH_URL+'/stats/dash',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(acctBody({}))});const j=await r.json();if(st.sheet&&st.sheet.type==='dash'){if(j.error)st.sheet.err=j.error==='owner only'?'Only the founder account can open this.':j.error;else st.sheet.d=j;renderSheet()}}catch(e){if(st.sheet&&st.sheet.type==='dash'){st.sheet.err='Could not load. Check your connection.';renderSheet()}}}
-function settings15(){return `${st.set.founder?`<div class="card"><h3>👑 Founder</h3><button class="btn wide" id="dashbtn">📊 Owner dashboard</button></div>`:''}`}
+function settings15(){return settings16()+`${st.set.founder?`<div class="card"><h3>👑 Founder</h3><button class="btn wide" id="dashbtn">📊 Owner dashboard</button></div>`:''}`}
 /* ---------- boot ---------- */
 function boot15(){try{addLiftPlates()}catch(e){console.warn('lifts',e)}
  try{statsPing();document.addEventListener('visibilitychange',()=>{if(!document.hidden)statsPing()})}catch(e){}
@@ -2701,6 +2742,203 @@ function boot15(){try{addLiftPlates()}catch(e){console.warn('lifts',e)}
 }
 
 const hofBtn=p=>isOwner()&&p.type==='workout'?`<button class="hofb" data-hofp="${p.id}" aria-label="Induct into Hall of Fame">🏛 Hall of Fame</button>`:'';
+/* =====================================================================
+   0.16: Profile tab, clean lists, founder plate and banners, smooth sheets, tour
+   ===================================================================== */
+/* ---------- founder plate ---------- */
+function founderPlate(o){o=o||{};const id='fp'+(pid++),lbl=String(o.label||'').toUpperCase().replace(/[^A-Z0-9 ]/g,'').trim().slice(0,12);
+ const rim=`FOUNDER · 001 · OVERLOAD${lbl?' · '+esc(lbl):''} · EST 2026 ·`;
+ const leaf=(a,r,side)=>{const t=a*Math.PI/180,x=50+r*Math.cos(t),y=50+r*Math.sin(t),rot=a+(side<0?90:-90)+(side<0?-28:28);return `<ellipse cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" rx="1.35" ry="3.1" transform="rotate(${rot.toFixed(1)} ${x.toFixed(2)} ${y.toFixed(2)})"/>`};
+ let L='';for(let i=0;i<7;i++){const a=124+i*13.5;L+=leaf(a,i%2?34.6:31.6,-1)+leaf(180-a,i%2?34.6:31.6,1)}
+ const spark=(x,y,d)=>`<path d="M${x} ${y-2.6}L${x+.6} ${y-.6}L${x+2.6} ${y}L${x+.6} ${y+.6}L${x} ${y+2.6}L${x-.6} ${y+.6}L${x-2.6} ${y}L${x-.6} ${y-.6}Z" fill="#fff6cf" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.6s" begin="${d}s" repeatCount="indefinite"/></path>`;
+ let s=`<svg viewBox="0 0 100 100" aria-hidden="true" class="fplate"><defs>
+ <radialGradient id="${id}b" cx="40%" cy="35%" r="75%"><stop offset="0" stop-color="#2c2a2f"/><stop offset=".6" stop-color="#0f0f13"/><stop offset="1" stop-color="#030304"/></radialGradient>
+ <linearGradient id="${id}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6cf"/><stop offset=".35" stop-color="#e8c55c"/><stop offset=".7" stop-color="#9c7424"/><stop offset="1" stop-color="#f3d77a"/></linearGradient>
+ <radialGradient id="${id}h" cx="38%" cy="32%" r="72%"><stop offset="0" stop-color="#fff3c0"/><stop offset=".5" stop-color="#d9b04a"/><stop offset="1" stop-color="#6e5014"/></radialGradient>
+ <linearGradient id="${id}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6cf" stop-opacity="0"/><stop offset=".5" stop-color="#fff6cf" stop-opacity=".5"/><stop offset="1" stop-color="#fff6cf" stop-opacity="0"/></linearGradient>
+ <linearGradient id="${id}w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ <path id="${id}t" d="M50 50 m-42.6 0 a42.6 42.6 0 1 1 85.2 0 a42.6 42.6 0 1 1 -85.2 0" fill="none"/>
+ <clipPath id="${id}c"><circle cx="50" cy="50" r="48"/></clipPath></defs>
+ <circle cx="50" cy="50" r="48" fill="url(#${id}b)"/>
+ <circle cx="50" cy="50" r="47.4" fill="none" stroke="url(#${id}g)" stroke-width="1.8"/>
+ <circle cx="50" cy="50" r="40.4" fill="none" stroke="url(#${id}g)" stroke-width=".9"/>
+ <text style="font:800 4.5px Archivo,sans-serif;letter-spacing:1.15px" fill="url(#${id}g)"><textPath href="#${id}t" startOffset="0">${rim}</textPath></text>
+ <circle cx="50" cy="50" r="37.6" fill="none" stroke="#e8c55c" stroke-width=".7" stroke-dasharray=".5 2.4" opacity=".7"><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="40s" repeatCount="indefinite"/></circle>
+ <g fill="url(#${id}g)">${L}</g>
+ <path d="M41.5 25 L40 16.5 L44.8 20.2 L50 13.6 L55.2 20.2 L60 16.5 L58.5 25 Z" fill="url(#${id}g)" stroke="#6e5014" stroke-width=".4"/><circle cx="50" cy="13.4" r="1.1" fill="#fff6cf"/><circle cx="40" cy="16.3" r=".8" fill="#fff6cf"/><circle cx="60" cy="16.3" r=".8" fill="#fff6cf"/><rect x="41.6" y="25.2" width="16.8" height="1.6" rx=".8" fill="url(#${id}g)"/>
+ <text x="50" y="87.4" text-anchor="middle" style="font:900 8.2px Archivo,sans-serif;letter-spacing:1.4px" fill="url(#${id}g)">001</text>
+ <circle cx="50" cy="50" r="23.2" fill="rgba(0,0,0,.45)"/><circle cx="50" cy="50" r="22" fill="url(#${id}h)"/><circle cx="50" cy="50" r="22" fill="none" stroke="#5a410f" stroke-width=".7"/><circle cx="50" cy="50" r="15.6" fill="none" stroke="#7a5a18" stroke-width=".7"/>`;
+ for(let i=0;i<6;i++){const a=i*Math.PI/3+Math.PI/6;s+=`<circle cx="${(50+18.8*Math.cos(a)).toFixed(2)}" cy="${(50+18.8*Math.sin(a)).toFixed(2)}" r="1.3" fill="#5a410f"/><circle cx="${(50+18.8*Math.cos(a)-.35).toFixed(2)}" cy="${(50+18.8*Math.sin(a)-.35).toFixed(2)}" r=".55" fill="#fff6cf"/>`}
+ s+=`<circle cx="50" cy="50" r="9.5" fill="#050506"/><circle cx="50" cy="50" r="9.5" fill="none" stroke="url(#${id}g)" stroke-width="1.5"/>
+ <g clip-path="url(#${id}c)"><rect x="-40" y="-20" width="26" height="140" fill="url(#${id}s)" transform="rotate(22 50 50)"><animate attributeName="x" values="-60;-60;130" keyTimes="0;.55;1" dur="6s" repeatCount="indefinite"/></rect></g>
+ ${spark(20,24,0)}${spark(82,28,.9)}${spark(80,78,1.7)}${spark(19,72,2.2)}
+ <path d="M14 44 A37 37 0 0 1 44 13" stroke="url(#${id}w)" stroke-width="6" stroke-linecap="round" fill="none"/>`;
+ if(o.ring!==undefined){const C=2*Math.PI*49;s+=`<circle cx="50" cy="50" r="49" fill="none" stroke="rgba(232,197,92,.3)" stroke-width="2"/><circle id="bigring" cx="50" cy="50" r="49" fill="none" stroke="#f3d77a" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="${C.toFixed(1)}" stroke-dashoffset="${(C*(1-o.ring)).toFixed(1)}" transform="rotate(-90 50 50)"/>`}
+ return s+'</svg>'}
+{const _p=plateSVG;plateSVG=function(c,state,o){if(c==='founder'&&state!=='idle'&&state!=='rest')return founderPlate(o);return _p(c,state,o)}}
+
+/* ---------- new banner scenes (profile + founder crew) ---------- */
+const XSC={founder:['Founder','Founder only'],sunrise:['Sunrise','Free'],neon:['Neon Gym','4 week streak'],summit:['Summit','50 workouts'],chalk:['Chalk Cloud','10 PRs']};
+function xScene(k,uid){const u=(uid||'x'+(pid++)).replace(/[^\w-]/g,''),R=(n,a,b)=>a+(hashS(u+n)%1000)/1000*(b-a);let o='';
+ if(k==='founder'){
+  const dust=Array.from({length:26},(_,i)=>{const x=R('x'+i,8,372).toFixed(0),d=R('d'+i,5,11).toFixed(1),b=(-R('b'+i,0,11)).toFixed(1),r=R('r'+i,.6,1.9).toFixed(1);return `<circle cx="${x}" cy="140" r="${r}" fill="#f3d77a"><animate attributeName="cy" values="140;-10" dur="${d}s" begin="${b}s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.7;1" dur="${d}s" begin="${b}s" repeatCount="indefinite"/></circle>`}).join('');
+  const rays=Array.from({length:6},(_,i)=>`<path d="M360 -20 L${120+i*46} 140 L${142+i*46} 140 Z" fill="#f3d77a" opacity=".05"><animate attributeName="opacity" values=".02;.09;.02" dur="${(5+i*.8).toFixed(1)}s" repeatCount="indefinite"/></path>`).join('');
+  const spokes=Array.from({length:12},(_,i)=>{const a=i*Math.PI/6;return `<path d="M${(Math.cos(a)*30).toFixed(1)} ${(Math.sin(a)*30).toFixed(1)}L${(Math.cos(a)*56).toFixed(1)} ${(Math.sin(a)*56).toFixed(1)}"/>`}).join('');
+  o=`<defs><radialGradient id="${u}a" cx="80%" cy="10%" r="90%"><stop offset="0" stop-color="#4a3510"/><stop offset=".45" stop-color="#16110a"/><stop offset="1" stop-color="#050505"/></radialGradient>
+  <linearGradient id="${u}g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9c7424"/><stop offset=".5" stop-color="#fff2bd"/><stop offset="1" stop-color="#9c7424"/></linearGradient>
+  <linearGradient id="${u}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff6cf" stop-opacity="0"/><stop offset=".5" stop-color="#fff6cf" stop-opacity=".22"/><stop offset="1" stop-color="#fff6cf" stop-opacity="0"/></linearGradient>
+  <path id="${u}p" d="M0 0 m-64 0 a64 64 0 1 1 128 0 a64 64 0 1 1 -128 0" fill="none"/></defs>
+  <rect width="380" height="130" fill="url(#${u}a)"/>${rays}
+  <g opacity=".14" stroke="#f3d77a" stroke-width=".5">${Array.from({length:22},(_,i)=>`<path d="M${i*20-60} 130 L${i*20+10} 0"/>`).join('')}</g>
+  <g transform="translate(312 66)" opacity=".55"><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="70s" repeatCount="indefinite"/>
+   <circle r="70" fill="none" stroke="url(#${u}g)" stroke-width="1.4"/><circle r="58" fill="none" stroke="#e8c55c" stroke-width=".8" stroke-dasharray="1 4"/>
+   <g stroke="#e8c55c" stroke-width=".6" opacity=".6">${spokes}</g>
+   <text style="font:800 7px Archivo,sans-serif;letter-spacing:3px" fill="#e8c55c"><textPath href="#${u}p">FOUNDING CREW · EST 2026 · OVERLOAD · FOUNDER 001 ·</textPath></text></g>
+   <circle r="26" fill="#0b0906" stroke="url(#${u}g)" stroke-width="1.4"/>
+   <path d="M-12 8 L-14 -6 L-6 0 L0 -11 L6 0 L14 -6 L12 8 Z" fill="url(#${u}g)"/></g>
+  ${dust}
+  <rect x="-80" y="-20" width="60" height="170" fill="url(#${u}s)" transform="rotate(18 190 65)"><animate attributeName="x" values="-120;-120;460" keyTimes="0;.5;1" dur="8s" repeatCount="indefinite"/></rect>
+  <rect y="0" width="380" height="2" fill="url(#${u}g)"/><rect y="128" width="380" height="2" fill="url(#${u}g)"/>
+  <text x="190" y="123" text-anchor="middle" style="font:800 5.5px Archivo,sans-serif;letter-spacing:4px" fill="#e8c55c" opacity=".35">FOUNDER · 001 · THE ORIGINAL · OVERLOAD · FOUNDER · 001</text>`}
+ else if(k==='sunrise'){o=`<defs><linearGradient id="${u}a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1d4f"/><stop offset=".55" stop-color="#e2557a"/><stop offset="1" stop-color="#ffb35c"/></linearGradient></defs><rect width="380" height="130" fill="url(#${u}a)"/>
+  <circle cx="280" cy="100" r="30" fill="#ffe08a"><animate attributeName="cy" values="104;92;104" dur="12s" repeatCount="indefinite"/></circle>
+  <path d="M0 130 L0 96 Q60 70 120 92 T250 88 T380 84 V130Z" fill="#5a2846"/><path d="M0 130 L0 108 Q80 90 170 110 T380 104 V130Z" fill="#2c1530"/>
+  ${[0,1,2].map(i=>`<path d="M${60+i*24} ${34+i*8} q4 -4 8 0 q4 -4 8 0" stroke="#2c1530" stroke-width="1.4" fill="none"><animateTransform attributeName="transform" type="translate" values="0 0;40 -6;0 0" dur="${10+i*2}s" repeatCount="indefinite"/></path>`).join('')}`}
+ else if(k==='neon'){o=`<rect width="380" height="130" fill="#08060f"/><g stroke="#7a2cff" stroke-width=".8" opacity=".55">${Array.from({length:13},(_,i)=>`<path d="M190 70 L${-120+i*52} 130"/>`).join('')}${[78,88,102,122].map(y=>`<path d="M0 ${y}H380"/>`).join('')}</g>
+  <text x="240" y="52" text-anchor="middle" style="font:900 34px Archivo,sans-serif;letter-spacing:6px" fill="none" stroke="#ff3d8b" stroke-width="1.6">LIFT<animate attributeName="opacity" values="1;1;.2;1;.4;1;1" keyTimes="0;.6;.62;.64;.66;.68;1" dur="4s" repeatCount="indefinite"/></text>
+  <text x="240" y="52" text-anchor="middle" style="font:900 34px Archivo,sans-serif;letter-spacing:6px" fill="#ff3d8b" opacity=".18">LIFT</text>
+  <rect x="200" y="62" width="80" height="2" rx="1" fill="#22e3ff"><animate attributeName="opacity" values=".4;1;.4" dur="2s" repeatCount="indefinite"/></rect>`}
+ else if(k==='summit'){o=`<rect width="380" height="130" fill="#0c1426"/>${Array.from({length:16},(_,i)=>`<circle cx="${R('sx'+i,5,375).toFixed(0)}" cy="${R('sy'+i,4,60).toFixed(0)}" r="${R('sr'+i,.4,1.1).toFixed(1)}" fill="#fff"><animate attributeName="opacity" values=".2;1;.2" dur="${R('sd'+i,2,5).toFixed(1)}s" repeatCount="indefinite"/></circle>`).join('')}
+  <path d="M0 130 L90 70 L140 96 L230 30 L300 88 L380 60 V130Z" fill="#26324d"/><path d="M230 30 L214 46 L224 44 L232 52 L240 44 L248 48Z" fill="#eef3fb"/><path d="M0 130 L70 100 L160 118 L260 96 L380 112 V130Z" fill="#141d33"/>
+  <path d="M230 30 V12" stroke="#c9cfdb" stroke-width="1.2"/><path d="M230 12 l14 4 -14 4z" fill="#ef2b36"><animateTransform attributeName="transform" type="skewY" values="0;6;0" dur="1.6s" repeatCount="indefinite"/></path>`}
+ else if(k==='chalk'){o=`<rect width="380" height="130" fill="#15161b"/>${Array.from({length:14},(_,i)=>`<circle cx="${R('cx'+i,20,360).toFixed(0)}" cy="${R('cy'+i,20,110).toFixed(0)}" r="${R('cr'+i,8,26).toFixed(0)}" fill="#e9e9ef" opacity=".05"><animateTransform attributeName="transform" type="translate" values="0 0;${R('tx'+i,-14,14).toFixed(0)} ${R('ty'+i,-10,4).toFixed(0)};0 0" dur="${R('td'+i,7,14).toFixed(1)}s" repeatCount="indefinite"/></circle>`).join('')}
+  <g fill="#2a2c33"><rect x="200" y="74" width="150" height="5" rx="2"/><rect x="214" y="54" width="12" height="46" rx="3"/><rect x="324" y="54" width="12" height="46" rx="3"/><rect x="200" y="60" width="10" height="34" rx="3"/><rect x="340" y="60" width="10" height="34" rx="3"/></g>
+  ${Array.from({length:18},(_,i)=>`<circle cx="${R('dx'+i,180,370).toFixed(0)}" cy="${R('dy'+i,40,100).toFixed(0)}" r=".9" fill="#fff" opacity=".5"><animate attributeName="opacity" values="0;.7;0" dur="${R('dd'+i,2,4).toFixed(1)}s" begin="${R('db'+i,0,3).toFixed(1)}s" repeatCount="indefinite"/></circle>`).join('')}`}
+ return `<svg class="scene" viewBox="0 0 380 130" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${o}</svg>`}
+{const _s=sceneSVG;sceneSVG=function(k,lvl,uid){if(XSC[k])return xScene(k,uid);return _s(k,lvl,uid)}}
+SCENES.founder=['Founder','Founder only',{founder:1}];
+{const _ok=sceneOK;sceneOK=function(k){if(k==='founder')return !!(st.cs&&st.cs.crew&&st.cs.crew.fcrew);return _ok(k)}}
+Object.assign(LOCK.pbanner.items,{sunrise:['Sunrise','','',E=>true],neon:['Neon Gym','','4 week streak',E=>E.streak>=4],summit:['Summit','','50 workouts',E=>E.workouts>=50],chalk:['Chalk Cloud','','10 PRs',E=>E.lifePR>=10],founder:['Founder','','Founder only',()=>!!st.set.founder]});
+function myBanner(){const k=look('pbanner');if(k!=='none')return k;return st.set.founder?'founder':''}
+
+/* ---------- smooth sheets: swap content in place, no close and reopen ---------- */
+{const _rs=renderSheet;renderSheet=function(){const el=$('sheet'),old=el.querySelector('.sheet'),top=old?old.scrollTop:0,pk=el.dataset.k||'';_rs();const s=el.querySelector('.sheet');if(!s||!st.sheet){el.dataset.k='';return}
+ const k=st.sheet.type+'|'+(st.sheet.sec||'');if(old){s.classList.add('na');s.parentNode.classList.add('na');if(pk===k)s.scrollTop=top}el.dataset.k=k}}
+
+/* ---------- profile tab ---------- */
+const BCATS=()=>{const E=engine();return [['mile','Milestones'],['week','Weekly'],...['Lift clubs','Consistency','Collections','Crew','Hidden','Funny'].filter(c=>E.B.some(b=>b.cat===c)).map(c=>[c,c])]};
+function row16(id,icon,label,val,extra){return `<button class="r15" ${id.includes('=')?id:`id="${id}"`}${extra||''}><span>${icon}</span><b>${label}</b><span class="sub">${val||''}</span><span class="chev">›</span></button>`}
+function renderProfile16(){const E=engine(),r=RANKS[E.rank],nx=RANKS[E.rank+1],ban=myBanner(),show=(st.set.showcase||[]).map(k=>E.B.find(x=>x.k===k)||E.R.find(x=>x.k===k)).filter(Boolean);
+ const bar=(a,b,l)=>`<div class="pbar"><div class="qh"><span>${l}</span><b>${Math.min(a,b)}/${b}</b></div><i><u style="width:${Math.min(100,Math.round(a/b*100))}%"></u></i></div>`;
+ const t=trophies(),got=t.filter(x=>x.earned).length,bl=st.plan?boxesLeft().length:0,bE=E.B.filter(b=>b.earned).length,lr=feat('liftranks')&&liftRanks().length;
+ const nm=st.set.name||'Lifter',P=st.set.prof||{};
+ let h=`<div class="card ph16">${ban?`<div class="ph16ban">${sceneSVG(ban,8,'me'+ban)}</div>`:'<div class="ph16ban ph16plain"></div>'}
+ <div class="ph16row"><span class="ph16av">${avatar({id:myId(),name:nm,profile:{av:st.set.av||{}}},76)}</span><div class="ph16emb">${emblem(E.rank,E.rank>=6?'spin':'')}</div></div>
+ <h2 class="ph16n ${nfxClass({profile:{nameFx:look('nameFx')}})}${st.set.founder?' nf-founder':''}">${st.set.founder?'<span class="crown">👑</span> ':''}${esc(nm)}</h2>
+ <div class="ph16tags">${st.set.founder?'<span class="tg tg-f">Founder #001</span>':''}<span class="tg">${esc(E.rname)}</span><span class="tg">🔥 ${E.streak} wk</span>${E.since?`<span class="tg">Since ${MON[toD(E.since).getMonth()]} ${toD(E.since).getFullYear()}</span>`:''}</div>
+ ${P.motto?`<p class="ph16m">“${esc(P.motto)}”</p>`:''}
+ <div class="ph16pins">${show.map(b=>`<button class="pin16" data-bdg="${b.k}">${b.icon}<span>${esc(b.name)}</span></button>`).join('')}${show.length<3?`<button class="pin16 add" id="pinpick">＋ Pin a badge</button>`:''}</div>
+ <div class="ph16btns"><button class="btn" id="profedit2">Edit profile</button><button class="btn" id="shareprof">📸 Share</button></div></div>`;
+ h+=`<div class="tiles four life16"><div class="tile"><div class="num">${E.workouts}</div><div class="sub">Workouts</div></div><div class="tile"><div class="num">${E.lifeVol>=1e6?(E.lifeVol/1e6).toFixed(2)+'M':kfmt(E.lifeVol)}</div><div class="sub">${U()} moved</div></div><div class="tile"><div class="num">${E.lifePR}</div><div class="sub">PRs</div></div><div class="tile"><div class="num">${E.power}</div><div class="sub">Rank power</div></div></div>`;
+ if(E.trial){const tr=E.trial;h+=`<div class="card trial"><div class="glbl">🔥 PROMOTION TRIAL · ${RANKS[tr.tier][0].toUpperCase()}</div>${bar(tr.days,tr.need,'Train on your planned days')}${bar(tr.beat,tr.needBeat,'Beat last week on lifts')}</div>`}
+ else if(nx)h+=`<div class="card nx16"><div class="glbl">NEXT RANK: ${nx[0].toUpperCase()}</div>${bar(E.active,nx[1],'Active weeks')}${bar(E.bcount,nx[2],'Badges')}</div>`;
+ h+=`<div class="card rows15">${st.cs?row16('myprof','🪪','Your crew profile','What your crew sees'):''}${row16('lockerbtn',bl?'🎁':'🎨','Customize',bl?bl+' mystery box'+(bl>1?'es':''):'Themes, effects, sounds')}${row16('troombtn','🏆','Trophy room',got+'/'+t.length)}${row16('badges16','🏅','Badges',bE+' earned')}${feat('season')?row16('openpass','🎟','Season pass','Level '+E.lvl+' of 30'):''}</div>`;
+ h+=`<div class="card rows15">${lr?row16('data-psec="lr"','🏋️','Lift ranks',lr+' lifts ranked'):''}${feat('mastery')?row16('data-psec="mast"','💪','Muscle mastery','Bronze to Legend'):''}${row16('data-psec="ladder"','🪜','Rank ladder','Rank '+(E.rank+1)+' of 8')}${row16('data-psec="life"','📈','Lifetime stats',E.lifeSets.toLocaleString()+' sets')}${row16('openyir','🎬',new Date().getFullYear()+' Year in review',new Date().getMonth()===11?'Ready':'Preview')}</div>`;
+ return h}
+function psecSheet(sh){const E=engine(),k=sh.sec2;let title='',body='';
+ if(k==='ladder'){title='Rank ladder';body=`<p class="sub">Each rank has 3 divisions: III, II, then I.</p>${RANKS.map((x,i)=>`<div class="ladder${i===E.rank?' cur':''}${i<E.rank?' past':''}">${emblem(i)}<div><b>${x[0]}</b><div class="sub">${i?`${x[1]} active weeks · ${x[2]} badges`:'Start here'}${i?` · ${UNLOCKS.find(u=>u[0]===i)[1]}`:''}</div></div>${i<=E.rank?'<span class="ok">✓</span>':'<span class="lk">🔒</span>'}</div>`).join('')}`}
+ else if(k==='life'){title='Lifetime stats';body=`<div class="tiles four"><div class="tile"><div class="num">${E.workouts}</div><div class="sub">Workouts</div></div><div class="tile"><div class="num">${E.lifeSets.toLocaleString()}</div><div class="sub">Sets</div></div><div class="tile"><div class="num">${E.lifeVol>=1e6?(E.lifeVol/1e6).toFixed(2)+'M':kfmt(E.lifeVol)}</div><div class="sub">${U()} moved</div></div><div class="tile"><div class="num">${E.lifePR}</div><div class="sub">PRs</div></div></div><p class="sub">Rank power ${E.power} · ${E.active} active weeks · ❄️ ${E.freeze} streak freeze${E.freeze===1?'':'s'}</p>`}
+ else if(k==='lr'){title='Lift ranks';body=`<div class="fwd">${liftRanksHTML().replace(/^<div class="card"><h3>Lift ranks<\/h3>/,'<div>')}</div>`}
+ else if(k==='mast'){title='Muscle mastery';body=masteryHTML().replace(/^<div class="card"><h3>Muscle mastery<\/h3>/,'<div>')}
+ return `<div class="ghd"><h2>${title}</h2><button class="btn sm" id="sheetx">Done</button></div>${body}`}
+function badgesSheet(sh){const E=engine(),cats=BCATS(),c=sh.cat||'mile';let body='';
+ if(c==='mile')body=`<p class="sub">Each one levels up: Bronze, Silver, Gold, Platinum, Diamond, Legend.</p><div class="bcase">${Object.keys(LADDER).map(ladderTile).join('')}</div>`;
+ else if(c==='week')body=`<p class="sub">Earn these again every week.</p><div class="bcase">${E.R.map(badgeBtn).join('')}</div>`;
+ else body=`<div class="bcase">${E.B.filter(b=>b.cat===c).map(badgeBtn).join('')}</div>`;
+ return `<div class="ghd"><h2>Badges</h2><button class="btn sm" id="sheetx">Done</button></div><p class="sub">${E.B.filter(b=>b.earned).length} earned. Tap one to see it or pin it.</p><div class="pchips">${cats.map(([k,n])=>`<button class="pchip${k===c?' on':''}" data-bcat="${esc(k)}">${esc(n)}</button>`).join('')}</div><div class="fwd">${body}</div>`}
+
+/* ---------- edit profile as a clean list ---------- */
+const PE16=[['banner','🖼','Banner'],['avatar','🙂','Avatar'],['motto','💬','Motto'],['gym','📍','Gym'],['song','🎵','Walkout song'],['ltype','🏋️','Lifter type'],['phase','📈','Right now I’m'],['flex','📊','Flex stats'],['tpins','🏆','Pinned trophies'],['fav','💿','Favorite plate'],['rim','✍️','Name on plate'],['acc','🎨','Profile color'],['jersey','🔢','Jersey number']];
+function pe16Val(sh,k){const P=sh.p;if(k==='banner'){const b=myBanner();return b?(LOCK.pbanner.items[b]||[b])[0]:'None'}if(k==='avatar'){const a=sh.av||{};return a.t==='icon'?a.v:a.t==='plate'?'Plate':'Initials'}
+ if(['motto','gym','song','ltype','phase'].includes(k))return P[k]||'Not set';if(k==='flex')return (sh.flex||[]).map(f=>(FLEX[f]||[f])[0]).join(', ')||'None';if(k==='tpins')return (P.tpins||[]).length+' of 3';
+ if(k==='fav')return P.fav?(FIN[P.fav]||[P.fav])[0]:'None';if(k==='rim')return sh.rim||'Default';if(k==='acc')return P.acc?`<i class="sw16" style="background:${esc(P.acc)}"></i>`:'Default';if(k==='jersey'){const m=myMember&&myMember();return m&&m.jersey!=null?'#'+m.jersey:'None'}return ''}
+function profEdit16(sh){const k=sh.sec;
+ if(!k){const rows=PE16.filter(([k])=>k!=='jersey'||st.cs).map(([k,i,l])=>row16(`data-pesec="${k}"`,i,l,pe16Val(sh,k))).join('');
+  return `<div class="ghd"><h2>Edit profile</h2><button class="btn sm" id="sheetx">Cancel</button></div><div style="text-align:center;margin:4px 0 12px">${avatar({id:myId(),name:st.set.name,profile:{av:sh.av||{}}},64)}</div><div class="card rows15 pe16">${rows}</div><button class="btn acc wide" id="profsave" style="min-height:52px;margin-top:6px">Save profile</button>`}
+ const lbl=(PE16.find(x=>x[0]===k)||[,,''])[2],head=`<div class="ghd"><button class="btn sm" id="pe16back">‹ Back</button><h2 style="margin:0">${lbl}</h2><button class="btn sm acc" id="pe16back2">Done</button></div>`;
+ if(k==='banner'){const E=engine();return head+`<div class="scgrid">${Object.entries(LOCK.pbanner.items).filter(([b,it])=>b!=='founder'||it[3](E)).sort((a,c)=>(c[0]==='founder')-(a[0]==='founder')).map(([b,it])=>{const ok=owns('pbanner',b,E),on=myBanner()===b||(b==='none'&&!myBanner());return `<button class="scb${ok?'':' lk'}${on?' on':''}" data-look="pbanner:${b}" aria-pressed="${on}">${b==='none'?'<div class="scnone">None</div>':sceneSVG(b,8,'pk'+b)}<span>${esc(it[0])}${ok?'':' 🔒'}</span></button>`}).join('')}</div><p class="sub">Locked ones show how to unlock them when you tap.</p>`}
+ const P=sh.p,E=eng14(),av=sh.av||{},ownPl=Object.keys(PC).filter(x=>!plateLocked(x)&&finOwned(x,E)),inp=(f,ph,max)=>`<input class="field" data-pe="${f}" maxlength="${max}" placeholder="${ph}" value="${esc(P[f]||'')}">`;
+ const chips=(f,L)=>`<div class="lkrow lk16">${L.map(t=>`<button class="lkc${P[f]===t?' on':''}" data-pset="${f}:${t}">${t}</button>`).join('')}</div>`;
+ let part='';
+ if(k==='avatar')part=`<div style="text-align:center;margin:6px 0 10px">${avatar({id:myId(),name:st.set.name,profile:{av}},84)}</div><div class="glbl">ICON</div><div class="lkrow lk16"><button class="lkc${!av.t?' on':''}" data-av="init:">Initials</button>${AV_ICONS.map(i=>`<button class="lkc${av.t==='icon'&&av.v===i?' on':''}" data-av="icon:${i}">${i}</button>`).join('')}</div><div class="glbl">COLOR</div><div class="lkrow lk16">${AV_COLS.map(c=>`<button class="lkc${av.c===c?' on':''}" data-avc="${c}"><i style="background:${c}"></i></button>`).join('')}</div>${ownPl.length?`<div class="glbl">OR USE A PLATE</div><div class="lkrow lk16">${ownPl.map(x=>`<button class="lkc${av.t==='plate'&&av.v===x?' on':''}" data-av="plate:${x}"><span class="lki2">${plateSVG(x,'done')}</span></button>`).join('')}</div>`:''}`;
+ else if(k==='motto')part=inp('motto','Leg day is a lifestyle',60);
+ else if(k==='gym')part=inp('gym','Home gym',30);
+ else if(k==='song')part=inp('song','Lose Yourself',30);
+ else if(k==='ltype')part=chips('ltype',LTYPES);
+ else if(k==='phase')part=chips('phase',PHASES);
+ else if(k==='flex')part=`<p class="sub">Pick 3 to show on your crew profile.</p><div class="lkrow lk16">${Object.entries(FLEX).map(([f,x])=>`<button class="lkc${(sh.flex||[]).includes(f)?' on':''}" data-flex="${f}">${x[0]}</button>`).join('')}</div>`;
+ else if(k==='tpins'){const earned=trophies().filter(t=>t.earned);part=`<p class="sub">Up to 3.</p><div class="lkrow lk16">${earned.map(t=>`<button class="lkc${(P.tpins||[]).includes(t.k)?' on':''}" data-tpin="${esc(t.k)}"><span class="lki2">${trophySVG(t)}</span>${esc(t.name.slice(0,18))}</button>`).join('')||'<span class="sub">Earn trophies to pin them.</span>'}</div>`}
+ else if(k==='fav')part=`<div class="lkrow lk16">${ownPl.filter(x=>FIN[x]).map(x=>`<button class="lkc${P.fav===x?' on':''}" data-pset="fav:${x}"><span class="lki2">${plateSVG(x,'done')}</span></button>`).join('')||'<span class="sub">Unlock special plates to show one off.</span>'}</div>`;
+ else if(k==='rim')part=`<input class="field" id="rimin" maxlength="24" placeholder="${esc((st.set.name||'Your name').toUpperCase())}" value="${esc(sh.rim||'')}"><p class="sub">Engraved around the big plate on Today.</p>`;
+ else if(k==='acc')part=`<div class="lkrow lk16"><button class="lkc${!P.acc?' on':''}" data-pset="acc:">Default</button>${AV_COLS.map(c=>`<button class="lkc${P.acc===c?' on':''}" data-pset="acc:${c}"><i style="background:${c}"></i></button>`).join('')}</div>`;
+ else if(k==='jersey')part=`<div class="row2"><input class="field" id="jerin" type="number" min="0" max="99" inputmode="numeric" placeholder="23" value="${esc(String((myMember()||{}).jersey??''))}"><button class="btn" id="jersave">Claim</button></div><p class="sub">Numbers are unique in your crew. #1 belongs to whoever started the crew.</p>`;
+ return head+`<div class="pe16sec">${part}</div>`}
+function grab16(sh){document.querySelectorAll('#sheet [data-pe]').forEach(i=>sh.p[i.dataset.pe]=i.value.trim());const r=$('rimin');if(r)sh.rim=r.value.trim()}
+
+/* ---------- customize as a clean list ---------- */
+const LK_ICON={accent:'🎨',bg:'🌌',welcome:'👋',icon:'📱',setfx:'✨',prfx:'🎉',rest:'⏱',sound:'🔊',nameFx:'🔤',card:'🃏',share:'📸',react:'😂'};
+function locker16(sh){const E=engine(),bl=boxesLeft(E).length,t=sh.sec;
+ if(!t){return `<div class="ghd"><h2>Customize</h2><button class="btn sm" id="sheetx">Done</button></div>${bl?`<button class="card boxcta" id="openbox"><span class="mbox">🎁</span><span class="stx"><b>${bl} mystery box${bl>1?'es':''} to open</b><span class="sub">Earned from your season pass and rank-ups</span></span></button>`:''}
+  <div class="card rows15">${Object.entries(LOCK).filter(([k])=>k!=='pbanner').map(([k,v])=>{const own=Object.keys(v.items).filter(i=>owns(k,i,E)).length,n=Object.keys(v.items).length;return row16(`data-lksec="${k}"`,LK_ICON[k]||'•',v.name,k==='react'?own+' of '+n:esc(v.items[look(k)][0])+(own<n?` · ${own}/${n}`:''))}).join('')}${row16('editlook','🪞','Frames and auras','')}${row16('data-lksec="fun"','😜','Fun extras','')}</div>
+  <p class="sub" style="text-align:center">Plate designs live in Plan → Plate. Profile banners are in Edit profile.</p>`}
+ const head=`<div class="ghd"><button class="btn sm" id="lk16back">‹ Back</button><h2 style="margin:0">${t==='fun'?'Fun extras':esc(LOCK[t].name)}</h2><button class="btn sm acc" id="sheetx">Done</button></div>`;
+ if(t==='fun')return head+tog('roasts',st.set.roasts!==false,'Roast lines on crew posts','A funny line under each workout post')+tog('restJokes',st.set.restJokes!==false,'Rest timer one-liners');
+ const v=LOCK[t];return head+`<div class="lkrow lk16">${Object.entries(v.items).map(([k,it])=>{const o=owns(t,k,E),on=t==='react'?o:look(t)===k;return `<button class="lkc${o?'':' lk'}${on?' on':''}" data-look="${t}:${k}" aria-pressed="${on}">${t==='accent'?`<i style="background:${it[1]}"></i>`:''}${t==='icon'?`<span class="lki2">${plateSVG(it[1],it[1]==='black'?'idle':'done')}</span>`:''}${esc(it[0])}${o?'':' <span class="lk16i">🔒</span>'}</button>`}).join('')}</div>
+ <p class="sub">${t==='react'?'Reactions you own show up on crew posts.':'Tap a locked one to see how to unlock it.'}${t==='icon'?' To use a new icon on iPhone, remove Overload from your Home Screen and add it again from Safari.':''}</p>`}
+
+/* ---------- welcome tour ---------- */
+const TOUR=[['🏋️','Today','Your workout for today. Tap a set to log it and the big plate fills up as you go. Rest timer starts on its own.'],['👥','Crew','Lift with friends. Post workouts, chat, and take down a boss together every week.'],['🪪','Profile','Your rank, badges and trophies. Make it yours in Edit profile and Customize.'],['📊','Stats','Your progress, PRs and how every lift is trending.'],['📋','Plan','Set your weekly split once. Each day gets its own plate and it repeats every week.']];
+function tourSheet(sh){const i=sh.i||0,t=TOUR[i],last=i===TOUR.length-1;return `<div class="tour16"><div class="t16i">${t[0]}</div><h2>${t[1]}</h2><p class="sub">${t[2]}</p><div class="t16d">${TOUR.map((_,j)=>`<i class="${j===i?'on':''}"></i>`).join('')}</div>
+ <div class="exfoot" style="margin-top:14px"><button class="btn" id="${i?'tourback':'sheetx'}" style="flex:1;min-height:50px">${i?'Back':'Skip'}</button><button class="btn acc" id="tournext" style="flex:1;min-height:50px">${last?'Let’s lift':'Next'}</button></div></div>`}
+function tourDone(){st.set.tour16=1;saveSet()}
+function tourCheck(){try{if(st.set.tour16)return;if(!st.plan){setTimeout(tourCheck,1500);return}if(realSessions().length>=3){tourDone();return}if(st.sheet){setTimeout(tourCheck,1500);return}tourDone();st.sheet={type:'tour',i:0};renderSheet()}catch(e){}}
+
+/* ---------- sheet routing ---------- */
+{const _s15=sheet15;sheet15=function(sh){
+ if(sh.type==='profedit')return profEdit16(sh);
+ if(sh.type==='badges16')return badgesSheet(sh);
+ if(sh.type==='psec')return psecSheet(sh);
+ if(sh.type==='tour')return tourSheet(sh);
+ return _s15(sh)}}
+{const _s14=sheet14;sheet14=function(sh){if(sh.type==='locker')return locker16(sh);return _s14(sh)}}
+const FWD=[()=>click15,()=>click14,()=>crewClick,()=>acctClick,()=>click13];
+async function sheetClick16(b){const sh=st.sheet,d=b.dataset;if(!sh)return false;
+ if(b.id==='sheetx'&&sh.back){st.sheet=sh.back;renderSheet();return true}
+ if(b.id==='profedit'||b.id==='profedit2'){const P=JSON.parse(JSON.stringify(st.set.prof||{}));st.sheet={type:'profedit',p:P,av:{...(st.set.av||{})},flex:(st.set.flex||['best','streak','vol']).slice(),rim:st.set.rim||''};renderSheet();return true}
+ if(sh.type==='profedit'){if(d.pesec){sh.sec=d.pesec;renderSheet();return true}if(b.id==='pe16back'||b.id==='pe16back2'){grab16(sh);sh.sec=null;renderSheet();return true}if(b.id==='profsave'){grab16(sh)}}
+ if(sh.type==='locker'){if(d.lksec){sh.sec=d.lksec;renderSheet();return true}if(b.id==='lk16back'||b.id==='lk16back2'){sh.sec=null;renderSheet();return true}
+  if(b.id==='editlook'){st.sheet={type:'look',back:sh};renderSheet();return true}
+  if(d.tog==='roasts'||d.tog==='restJokes'){const k=d.tog;st.set[k]=st.set[k]===false;saveSet();b.setAttribute('aria-pressed',st.set[k]!==false);return true}}
+ if(sh.type==='badges16'&&d.bcat){sh.cat=d.bcat;renderSheet();return true}
+ if(sh.type==='tour'){if(b.id==='tournext'){if((sh.i||0)>=TOUR.length-1){st.sheet=null;renderSheet();return true}sh.i=(sh.i||0)+1;renderSheet();return true}if(b.id==='tourback'){sh.i=Math.max(0,(sh.i||0)-1);renderSheet();return true}}
+ if(b.closest('.fwd')){const prev=st.sheet;for(const f of FWD){let fn;try{fn=f()}catch(e){continue}if(typeof fn==='function'&&await fn(b)){if(st.sheet&&st.sheet!==prev&&!st.sheet.back&&['badge','lad','pass'].includes(st.sheet.type))st.sheet.back=prev;if(st.sheet)renderSheet();return true}}}
+ return false}
+/* main-pane clicks for the profile tab */
+async function click16(b){const d=b.dataset;
+ if(b.id==='profedit2'){const P=JSON.parse(JSON.stringify(st.set.prof||{}));st.sheet={type:'profedit',p:P,av:{...(st.set.av||{})},flex:(st.set.flex||['best','streak','vol']).slice(),rim:st.set.rim||''};renderSheet();return true}
+ if(b.id==='badges16'){st.sheet={type:'badges16',cat:'mile'};renderSheet();return true}
+ if(d.psec){st.sheet={type:'psec',sec2:d.psec};renderSheet();return true}
+ if(b.id==='tourbtn'){st.sheet={type:'tour',i:0};renderSheet();return true}
+ return false}
+function settings16(){return `<div class="card rows15">${row16('tourbtn','👋','Take the app tour','How Overload works')}</div>`}
+function navSync16(){const b=$('t-me');if(b)b.setAttribute('aria-pressed',!!st.profile&&!st.settings)}
+function boot16(){try{
+ const me=$('t-me');if(me)me.addEventListener('click',()=>{const again=st.profile&&!st.settings;haptic('tap');st.profile=true;st.settings=false;st.confirm=null;st.picker=null;if(again||!paneCached())render();else render();paneFade();window.scrollTo({top:0})});
+ const rb=$('rankbtn');if(rb)rb.style.display='none';
+ setTimeout(tourCheck,1400);
+ // the founder’s crew wears the founder banner the first time it’s unlocked
+ setTimeout(async()=>{try{const c=st.cs&&st.cs.crew;if(c&&c.fcrew&&isOwner()&&c.banner!=='founder'&&!st.set.fban16){st.set.fban16=1;saveSet();await crewCall('banner',{banner:'founder'});render()}}catch(e){}},5000);
+ }catch(e){console.warn('boot16',e)}}
 
 /* ---------- redesign: line icon set (replaces emoji) ---------- */
 const IC={
@@ -2848,7 +3086,7 @@ async function sheetClick13(b){const d=b.dataset,sh=st.sheet;if(!sh)return false
  addEventListener('online',()=>{if(st.set.acct)syncNow(true);if(crewOn())wsConnect()});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){if(ws){try{ws.close()}catch(e){}}return}if(st.set.acct)syncNow();if(crewOn()){wsConnect();setTimeout(sendLive,500)}})})();
 
-startIconizer();boot15();boot14();loadCounter();crewLoop();if(crewOn()){saveCrewId();setTimeout(()=>syncCrew(true),2500)}
+startIconizer();boot15();boot14();boot16();loadCounter();crewLoop();if(crewOn()){saveCrewId();setTimeout(()=>syncCrew(true),2500)}
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&crewOn())syncCrew()});
 if(st.plan&&!Array.isArray(st.set.seen))checkUnlocks();
 splash().then(()=>{if(st.plan&&st.set.seenVer!==VERSION){st.sheet={type:'news'};renderSheet()}else if(!weekReport()){checkUnlocks()}checkMissing().then(()=>mirrorNow())});
